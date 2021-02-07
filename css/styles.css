@@ -316,6 +316,7 @@ ol {
 }
 .portfolio__img {
   width: 100%;
+  margin-bottom: 20px;
 }
 .portfolio__progect-list {
   display: flex;
