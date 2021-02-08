@@ -10,8 +10,8 @@
   --contact-color: #757575;
   --footer-bg-color: #2f303a;
   --border-color: #eeeeee;
-  --border-bottom: #ECECEC;
-  --grey_06:  rgba(255, 255, 255, 0.6);
+  --border-bottom: #ececec;
+  --grey_06: rgba(255, 255, 255, 0.6);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -19,7 +19,7 @@ body {
   font-style: normal;
   letter-spacing: 0.03em;
 }
-section{
+section {
   padding: 94px 0;
 }
 address {
@@ -60,6 +60,9 @@ ul,
 ol {
   list-style-type: none;
 }
+img {
+  display: block;
+}
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -72,7 +75,7 @@ ol {
 }
 
 /*=== head ===*/
-.header{
+.header {
   border-bottom: 1px solid var(--border-bottom);
 }
 .header__nav-link,
@@ -162,7 +165,7 @@ ol {
 /* ========== */
 
 /* === features === */
-.features{
+.features {
   padding-bottom: 0;
 }
 .visually-hidden {
@@ -180,10 +183,12 @@ ol {
 }
 .features__list {
   display: flex;
-  justify-content: space-between;
 }
 .features__list-item {
   width: calc((100% - 30px * 3) / 4);
+}
+.features__list-item:not(:last-child) {
+  margin-right: 30px;
 }
 .features__title {
   font-size: 14px;
@@ -239,12 +244,13 @@ ol {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
+  width: 270px;
 }
 .team__list-item:not(:last-child) {
   margin-right: 30px;
 }
-.team__img {
-  margin-bottom: 30px;
+.team-name {
+  padding: 30px 20px 20px;
 }
 .team__title-name {
   font-weight: 500;
@@ -255,7 +261,7 @@ ol {
 .team__text {
   font-size: 16px;
   line-height: 1.2;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 /*  =========  */
 
@@ -279,8 +285,11 @@ ol {
   line-height: 1.7;
   color: var(--grey_06);
 }
-.footer__item {
+.footer__contacts {
   margin-top: 9px;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 /*  ======  */
 
@@ -288,9 +297,6 @@ ol {
 .portfolio__list-filter {
   display: flex;
   justify-content: center;
-}
-.portfolio__list-filter-item {
-  display: inline-block;
   margin-bottom: 50px;
 }
 .portfolio__list-filter-item:not(:last-child) {
@@ -313,18 +319,21 @@ ol {
 }
 .portfolio__img {
   width: 100%;
-  margin-bottom: 20px;
 }
 .portfolio__progect-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  /* зло повержено */
 }
 .portfolio__progect {
-  width: calc((100% - 90px) / 3);
-  margin: 15px;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
   background-color: var(--white-color);
   border: 1px solid var(--border-color);
+}
+.portfolio__progect:nth-child(3n + 3) {
+  margin-right: 0;
 }
 .portfolio__progect:nth-last-child(-n + 3) {
   margin-bottom: 0;
@@ -333,13 +342,13 @@ ol {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  margin-left: 24px;
   margin-bottom: 4px;
 }
 .portfolio__title-subtext {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
-  margin-left: 24px;
-  margin-bottom: 20px;
+}
+.portfolio__name-progect {
+  padding: 20px 24px;
 }
